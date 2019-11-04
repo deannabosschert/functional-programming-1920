@@ -19,3 +19,6 @@ This assessment focusses on:
 ## Concept
 - Culturele herkomst in verband met [x]
 - Soorten wapens en van welk materiaal (of cultuur, of herkomst)
+
+
+## Schetsen
