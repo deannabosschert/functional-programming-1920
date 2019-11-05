@@ -17,11 +17,17 @@ This assessment focusses on:
 ## To Do
 [x] Write down global concept
 [x] Write down data needed and subcategories
+[ ] Set up wiki and document process
 [ ] Write down/sketch possible dataviz
 [ ] Make sketch
+[ ] Do datacleanup exercise with survey data
 [ ] Extract data with SPARQL
 [ ] Clean up data
-[ ]
+[ ] D3 tutorial
+[ ] Basic D3 setup
+[ ] Make dataviz from short hand-written file (with correct info, though)
+[ ] Replace hand-written data with data connected by query
+
 
 ## Concept
 Soorten wapens en munitie in het bezit van het NMVW, in kaart brengen.
