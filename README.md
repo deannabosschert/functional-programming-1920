@@ -14,10 +14,17 @@ This assessment focusses on:
 * subgoal 8 (use svg)
 * subgoal 9 (use libraries)
 
-
+## To Do
+[x] Write down global concept
+[x] Write down data needed and subcategories
+[ ] Write down/sketch possible dataviz
+[ ] Make sketch
+[ ] Extract data with SPARQL
+[ ] Clean up data
+[ ]
 
 ## Concept
-Soorten wapens en munitie in het bezit van het NMVW in kaart brengen.
+Soorten wapens en munitie in het bezit van het NMVW, in kaart brengen.
 
 - Culturele herkomst in verband met [x]
 - Soorten wapens en van welk materiaal (of cultuur, of herkomst)
