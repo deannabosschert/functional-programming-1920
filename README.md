@@ -17,6 +17,8 @@ This assessment focusses on:
 
 
 ## Concept
+Soorten wapens en munitie in het bezit van het NMVW in kaart brengen.
+
 - Culturele herkomst in verband met [x]
 - Soorten wapens en van welk materiaal (of cultuur, of herkomst)
 
