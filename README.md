@@ -18,9 +18,9 @@ This assessment focusses on:
 [x] Write down global concept
 [x] Write down data needed and subcategories
 [ ] Set up wiki and document process
+[ ] Do datacleanup exercise with survey data
 [ ] Write down/sketch possible dataviz
 [ ] Make sketch
-[ ] Do datacleanup exercise with survey data
 [ ] Extract data with SPARQL
 [ ] Clean up data
 [ ] D3 tutorial
@@ -38,6 +38,8 @@ Soorten wapens en munitie in het bezit van het NMVW, in kaart brengen.
 
 ## Schetsen
 [x]
+
+- Context toevoegen; waarvoor de wapens worden gebruikt? --> evt met aparte legenda en filteroptie.
 
 ## Data benodigd
 ### Onderdelen
