@@ -8,12 +8,10 @@
   html {
     margin: 0;
     padding: 0;
-    font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
-
   }
 
   body {
-    font-family: serif;
+    font-family: sans-serif;
     display: flex;
     flex-direction: column;
     background-color: #BEBEBE;
@@ -24,13 +22,15 @@
 
   h1{
     color: white;
-    font-size: 2rem;
+    font-size: 3rem;
+    font-variant: small-caps;
   }
 
   h2{
-    margin-top: -5vh;
+    margin-top: -3vh;
     color: white;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    font-variant: small-caps;
   }
 
 .smiley{
