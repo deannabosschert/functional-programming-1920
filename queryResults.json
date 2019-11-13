@@ -1,0 +1,2101 @@
+{
+  "head": {
+    "link": [],
+    "vars": [
+      "catBTLabel",
+      "catLabel",
+      "choCount"
+    ]
+  },
+  "results": {
+    "distinct": false,
+    "ordered": true,
+    "bindings": [
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "projectielen met niet-explosieve voorstuwing"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "pijlen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "12001"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "stokwapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "speren"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "3364"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "projectiellanceerders met niet-explosief voortstuwingsmiddel"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "bogen (wapens)"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "2080"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "blanke wapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "zwaarden"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "2072"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "dolken"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "krissen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "1762"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "speren naar vorm"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "lansen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "1740"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "blanke wapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "dolken"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "1713"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "knuppels"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "knotsen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "1554"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "zwaardsieraden"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "zwaardstootplaten"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "652"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "blanke wapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "messen (wapens)"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "645"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "pijlonderdelen"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "pijlpunten"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "616"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "bogen (wapens)"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "handbogen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "553"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "blanke wapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "bijlen (wapens)"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "367"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "speren naar functie"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "vissperen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "308"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "projectiellanceerders met niet-explosief voortstuwingsmiddel"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "blaasroeren"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "300"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "stokwapenonderdelen"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "lanspunten"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "295"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "gevesten"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "krisgrepen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "245"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "zwaarden naar vorm"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "sabels"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "244"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "stokwapenonderdelen"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "speerpunten"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "237"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "blanke wapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "harpoenen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "208"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "ceremoniële wapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "ceremoniële bijlen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "206"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "speren naar vorm"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "werpsperen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "149"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "pijlen"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "vogelpijlen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "148"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "projectiellanceerders met niet-explosief voortstuwingsmiddel"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "speerwerpers"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "148"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "bijlen (wapens)"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "strijdbijlen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "133"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "projectielen met niet-explosieve voorstuwing"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "werpmessen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "124"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "werpstokken (projectielen)"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "boemerangs"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "114"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "harpoenonderdelen"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "harpoenpunten"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "104"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "speren naar vorm"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "assagaaien"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "96"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "wapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "slagwapens"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "71"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "wapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "ceremoniële wapens"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "70"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "ceremoniële wapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "ceremoniële messen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "67"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "slagwapenonderdelen"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "knotskoppen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "64"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "wapens en munitie"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "wapens"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "63"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "ceremoniële wapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "ceremoniële speren"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "63"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "schoudervuurwapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "geweren"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "61"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "munitie voor lichte wapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "kogels (munitie)"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "59"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "projectielwapenonderdelen"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "werphouten"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "57"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "geschut naar vorm"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "kanonnen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "53"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "onderdelen van blanke wapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "zwaardsieraden"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "52"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "slingers (projectielwapens)"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "steenslingers"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "51"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "zwaarden naar vorm"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "slagzwaarden"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "47"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "speren naar functie"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "jachtsperen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "46"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "lemmeten"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "krislemmeten"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "44"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "speren naar vorm"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "pieken"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "43"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "projectiellanceerders met niet-explosief voortstuwingsmiddel"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "slingers (projectielwapens)"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "43"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "wapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "blanke wapens"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "41"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "projectielwapenonderdelen"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "boogpezen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "38"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "bogen (wapens)"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "kruisbogen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "36"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "ceremoniële wapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "ceremoniële zwaarden"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "34"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "slagwapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "knuppels"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "34"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "slotonderdelen"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "vuurstenen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "28"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "messen (wapens)"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "hanengevechtsmesjes"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "27"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "onderdelen van blanke wapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "lemmeten"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "26"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "projectielen met niet-explosieve voorstuwing"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "werpstokken (projectielen)"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "26"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "onderdelen van blanke wapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "gevesten"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "26"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "projectielen met niet-explosieve voorstuwing"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "voetangels"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "23"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "ceremoniële wapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "ceremoniële dolken"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "21"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "wapens en munitie"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "munitie"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "19"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "ceremoniële dolken"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "magische dolken"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "19"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "onderdelen van blanke wapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "klingen (wapenonderdelen)"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "19"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "projectiellanceerders met niet-explosief voortstuwingsmiddel"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "katapulten (handwapens)"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "18"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "messen (wapens)"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "hakmessen (wapens)"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "18"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "vuistvuurwapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "pistolen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "16"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "pijlonderdelen"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "pijlschachten"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "15"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "zwaarden naar vorm"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "degens"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "15"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "stokwapenonderdelen"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "lansschachten"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "15"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "elgers"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "drietanden"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "13"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "jachtsperen"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "varkenssperen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "13"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "speren naar vorm"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "stootsperen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "13"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "zwaarden naar functie"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "beulszwaarden"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "12"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "harpoenonderdelen"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "harpoenschachten"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "11"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "geweren"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "vuursteengeweren"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "11"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "hagelgeweren"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "spreidloopgeweren"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "11"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "onderdelen van blanke wapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "harpoenonderdelen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "11"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "vuurwapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "voorladers"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "10"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "bloedlaters"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "offermessen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "10"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "projectielwapenonderdelen"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "slingerstenen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "10"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "vissperen"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "elgers"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "10"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "blanke wapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "degenstokken"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "10"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "stokwapenonderdelen"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "speerschachten"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "9"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "ceremoniële messen"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "schijfmessen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "9"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "fighting bracelets"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "polsmessen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "9"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "pijlen"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "werppijlen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "9"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "zwaarden naar vorm"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "kromzwaarden"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "9"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "messen (wapens)"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "snelmessen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "8"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "draagbare vuurwapens naar functie"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "jachtgeweren"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "8"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "zwaarden naar vorm"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "hartsvangers"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "8"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "projectielen met niet-explosieve voorstuwing"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "bola's"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "8"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "bijlen (wapens)"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "tomahawks"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "7"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "vuistwapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "vingermessen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "7"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "schoudervuurwapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "musketten"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "6"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "wapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "projectielwapens"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "6"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "vuistwapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "boksbeugels"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "6"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "blanke wapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "stokwapens"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "6"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "jachtsperen"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "vogelsperen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "6"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "draagbare vuurwapens naar vorm"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "vuistvuurwapens"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "5"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "ceremoniële zwaarden"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "ceremoniële degens"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "5"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "projectielen met niet-explosieve voorstuwing"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "werpschijven"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "5"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "projectielwapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "projectielwapens met explosief voortstuwingsmiddel"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "4"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "wapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "wapenonderdelen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "4"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "blanke wapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "onderdelen van blanke wapens"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "4"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "projectielwapens met explosief voortstuwingsmiddel"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "vuurwapens"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "4"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "kogels (munitie)"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "geweerkogels"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "4"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "projectielwapenonderdelen"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "vuurwapenonderdelen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "3"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "blanke wapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "bajonetten"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "3"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "hulzen"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "patroonhulzen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "3"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "zwaarden naar vorm"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "dubbelzwaarden"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "3"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "lopen (vuurwapenonderdelen)"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "kanonlopen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "3"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "munitieonderdelen"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "hulzen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "2"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "wapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "wurgkoorden"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "2"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "vuistwapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "vuistmessen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "2"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "speren"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "speren naar functie"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "2"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "munitie"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "munitie voor lichte wapens"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "2"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "draagbare vuurwapens naar vorm"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "revolvers"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "2"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "projectielwapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "projectielwapens met niet-explosief voortstuwingsmiddel"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "2"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "Objecttrefwoord"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "wapens en munitie"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "2"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "munitie voor lichte wapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "patronen (munitie)"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "2"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "zwaarden"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "zwaarden naar vorm"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "2"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "onderdelen van blanke wapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "stokwapenonderdelen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "2"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "projectielwapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "projectielwapenonderdelen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "2"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "projectielwapenonderdelen"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "belegstukjes"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "2"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "dolken"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "ponjaards"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "2"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "harpoenonderdelen"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "harpoenlijnspanners"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "2"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "vissperen"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "zalmsperen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "1"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "artilleriemunitie"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "kanonskogels"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "1"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "pieken"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "enterpieken"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "1"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "schoudervuurwapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "karabijnen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "1"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "projectielwapens met niet-explosief voortstuwingsmiddel"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "projectiellanceerders met niet-explosief voortstuwingsmiddel"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "1"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "explosieve wapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "granaten"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "1"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "harpoenonderdelen"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "harpoenkopstukken"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "1"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "knuppels"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "goedendags"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "1"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "projectielwapens met niet-explosief voortstuwingsmiddel"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "projectielen met niet-explosieve voorstuwing"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "1"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "vuurwapenonderdelen"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "sloten en slotonderdelen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "1"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "stokwapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "hellebaarden"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "1"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "slagwapens"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "ploertendoders"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "1"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "draagbare vuurwapens naar vorm"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "schoudervuurwapens"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "1"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "zwaarden"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "zwaarden naar functie"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "1"
+        }
+      },
+      {
+        "catBTLabel": {
+          "type": "literal",
+          "value": "sloten en slotonderdelen"
+        },
+        "catLabel": {
+          "type": "literal",
+          "value": "slotonderdelen"
+        },
+        "choCount": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "1"
+        }
+      }
+    ]
+  }
+}
