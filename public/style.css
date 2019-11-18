@@ -1,0 +1,11 @@
+circle {
+        stroke: white;
+        fill: #05668D;
+        opacity: 0.3;
+        stroke-width: 2px;
+    }
+
+    
+body{
+  background-color: #ABABFF;
+}

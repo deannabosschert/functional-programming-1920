@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body {
+  background-color: #e2c3fc;
+  color: #f5f5f5;
+  text-align: center;
+  font-size: 12em;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+
+circle {
+        stroke: white;
+        fill: #6D5D80;
+        opacity: 0.3;
+        stroke-width: 2px;
+    }

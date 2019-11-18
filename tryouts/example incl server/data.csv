@@ -1,0 +1,11 @@
+id,parentId,size
+cars,
+owned,cars
+traded,cars
+learned,cars
+pilot,owned,40
+325ci,owned,40
+accord,owned,20
+chevette,traded,10
+odyssey,learned,20
+maxima,learned,10
