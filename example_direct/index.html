@@ -14,32 +14,33 @@
 </html>
 
 <script>
-    var vWidth = 300;
-    var vHeight = 200;
+    var Width = 600;
+    var Height = 400;
 
     // Prepare our physical space
-    var g = d3.select('svg').attr('width', vWidth).attr('height', vHeight).select('g');
+    var g = d3.select('svg').attr('width', Width).attr('height', Height).select('g');
 
-    // Get the data from our CSV file
-    d3.csv('data.csv', function(error, vCsvData) {
+    // Get the data from our CSV files
+    d3.csv('catLabel_catBTLabel.csv', function(error, CsvData) {
         if (error) throw error;
 
-        vData = d3.stratify()(vCsvData);
-        drawViz(vData);
+        Data = d3.stratify()(CsvData);
+        drawViz(Data);
     });
+    
 
-    function drawViz(vData) {
+    function drawViz(Data) {
         // Declare d3 layout
-        var vLayout = d3.pack().size([vWidth, vHeight]);
+        var Layout = d3.pack().size([Width, Height]);
 
         // Layout + Data
-        var vRoot = d3.hierarchy(vData).sum(function (d) { return d.data.size; });
-        var vNodes = vRoot.descendants();
-        vLayout(vRoot);
-        var vSlices = g.selectAll('circle').data(vNodes).enter().append('circle');
+        var Root = d3.hierarchy(Data).sum(function (d) { return d.data.size; });
+        var Nodes = Root.descendants();
+        Layout(Root);
+        var Slices = g.selectAll('circle').data(Nodes).enter().append('circle');
 
         // Draw on screen
-        vSlices.attr('cx', function (d) { return d.x; })
+        Slices.attr('cx', function (d) { return d.x; })
             .attr('cy', function (d) { return d.y; })
             .attr('r', function (d) { return d.r; });
     }
