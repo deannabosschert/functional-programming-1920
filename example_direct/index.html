@@ -20,14 +20,25 @@
     // Prepare our physical space
     var g = d3.select('svg').attr('width', Width).attr('height', Height).select('g');
 
-    // Get the data from our CSV files
-    d3.csv('catLabel_catBTLabel.csv', function(error, CsvData) {
-        if (error) throw error;
 
-        Data = d3.stratify()(CsvData);
-        drawViz(Data);
-    });
-    
+    // // Get the data from our CSV files
+    // d3.csv('catLabel_catBTLabel.csv', function(error, CsvData) {
+    //     if (error) throw error;
+    //
+    //     Data = d3.stratify()(CsvData);
+    //
+    //     console.log(CsvData);
+    //     drawViz(Data);
+    // });
+
+    d3.csv("catLabel_catBTLabel.csv", function(data1) {
+      console.log(data1);
+  });
+
+    d3.csv("aantallen.csv","catLabel_catBTLabel.csv", function(data1,data2) {
+    console.log(data2);
+})
+
 
     function drawViz(Data) {
         // Declare d3 layout
