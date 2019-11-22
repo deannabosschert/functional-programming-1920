@@ -1,3 +1,5 @@
+ <!--source for sparql data to json https://beta.vizhub.com/Razpudding/2b231e4f093b411bbb259115019e02ea?edit=files&file=index.js -->
+
 <!DOCTYPE html>
   <meta charset="utf-8">
   <head>
@@ -78,16 +80,26 @@
     loadData(endpoint, query_IDs, query_aantallen)
   }
 
-  function loadData(endpoint, query_IDs, query_aantallen){
-    d3.json(endpoint + '?query=' + encodeURIComponent(query_IDs) + '&format=json').then(function(id_parentID_columns){
+  function loadData(endpoint, query_IDs, query_aantallen, id_parentID_columns, id_size_columns){
+    d3.json(endpoint + '?query=' + encodeURIComponent(query_IDs) + '&format=json').then(function id_parentID_columns(id_parentID_columns){
       return id_parentID_columns
+      // returnbothcolumns()
     })
+    console.log(id_parentID_columns)
     d3.json(endpoint + '?query=' + encodeURIComponent(query_aantallen) + '&format=json').then(function(id_size_columns){
       console.log(id_size_columns)
       return id_size_columns
     })
-    id_parentID_columns(id_parentID_columns)
-    console.log(id_parentID_columns)
+
+
+    // function returnbothcolumns(id_parentID_columns, id_size_columns){
+      // console.log(id_parentID_columns)
+    // }
+    // console.log(id_parentID_columns)
+
+
+
+
     // dataToArray(id_parentID_columns, id_size_columns)
   }
 
