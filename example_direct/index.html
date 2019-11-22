@@ -14,15 +14,19 @@
 </html>
 
 <script>
-// import data from api and return values --> values in array --> merge arrays
 
-    var Width = 600;
-    var Height = 400;
+  // Prepare our physical space for d3
+  prepare_HTML_space()
+  function prepare_HTML_space() {
+    let Width = 600
+    let Height = 400
+    let g = d3.select('svg').attr('width', Width).attr('height', Height).select('g')
+  }
 
-    // Prepare our physical space
-    var g = d3.select('svg').attr('width', Width).attr('height', Height).select('g');
-
-
+  // import data from api and return values --> values in array --> merge arrays
+  // import data from api and return values
+  sparQL_queries()
+  function sparQL_queries() {
        const endpoint = 'https://api.data.netwerkdigitaalerfgoed.nl/datasets/ivo/NMVW/services/NMVW-19/sparql';
        const query_IDs = `
          PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -44,8 +48,7 @@
                ?catParent skos:prefLabel ?parentId .
              }
              GROUP BY ?id ?parentId
-             ORDER BY ASC(?id)
-               `
+             ORDER BY ASC(?id)     `
 
         const query_aantallen = `
           PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -72,19 +75,29 @@
           GROUP BY ?id
           ORDER BY ASC(?id)
           `
+    loadData(endpoint, query_IDs, query_aantallen)
+  }
 
-          d3.json(endpoint + '?query=' + encodeURIComponent(query_IDs) + '&format=json').then(function(id_parentID_columns){
-            console.log(id_parentID_columns)
-          })
+  function loadData(endpoint, query_IDs, query_aantallen){
+    d3.json(endpoint + '?query=' + encodeURIComponent(query_IDs) + '&format=json').then(function(id_parentID_columns){
+      return id_parentID_columns
+    })
+    d3.json(endpoint + '?query=' + encodeURIComponent(query_aantallen) + '&format=json').then(function(id_size_columns){
+      console.log(id_size_columns)
+      return id_size_columns
+    })
+    id_parentID_columns(id_parentID_columns)
+    console.log(id_parentID_columns)
+    // dataToArray(id_parentID_columns, id_size_columns)
+  }
 
-          d3.json(endpoint + '?query=' + encodeURIComponent(query_aantallen) + '&format=json').then(function(id_parentID_columns){
-            console.log(id_parentID_columns)
-          })
-
+  // function dataToArray(id_parentID_columns, id_size_columns){
+  //
+  // }
 
 
 // Teken visualisatie
-    function drawViz(Data) {
+  function drawViz(Data) {
         // Declare d3 layout
         var Layout = d3.pack().size([Width, Height]);
 
