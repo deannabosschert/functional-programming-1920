@@ -81,15 +81,19 @@
   }
 
   function loadData(endpoint, query_IDs, query_aantallen, id_parentID_columns, id_size_columns){
-    d3.json(endpoint + '?query=' + encodeURIComponent(query_IDs) + '&format=json').then(function id_parentID_columns(id_parentID_columns){
+    d3.json(endpoint + '?query=' + encodeURIComponent(query_IDs) + '&format=json').then
+    (function(id_parentID_columns){
+      console.log(id_parentID_columns)
+      // --> je moet wel aangeven aan welke functie je deze gegevens wil returnen/doorgeven
+      dataToArray(id_parentID_columns)
       return id_parentID_columns
       // returnbothcolumns()
     })
-    console.log(id_parentID_columns)
-    d3.json(endpoint + '?query=' + encodeURIComponent(query_aantallen) + '&format=json').then(function(id_size_columns){
-      console.log(id_size_columns)
-      return id_size_columns
-    })
+    d3.json(endpoint + '?query=' + encodeURIComponent(query_aantallen) + '&format=json').then(id_size_columns)
+
+
+
+    // console.log(id_size_columns)
 
 
     // function returnbothcolumns(id_parentID_columns, id_size_columns){
@@ -100,12 +104,17 @@
 
 
 
-    // dataToArray(id_parentID_columns, id_size_columns)
+    dataToArray(id_parentID_columns, id_size_columns)
   }
 
-  // function dataToArray(id_parentID_columns, id_size_columns){
-  //
-  // }
+  function dataToArray(id_parentID_columns, id_size_columns){
+
+  }
+
+
+  function id_size_columns(){
+    console.log(id_size_columns)
+  }
 
 
 // Teken visualisatie
