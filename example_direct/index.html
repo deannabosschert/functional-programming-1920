@@ -1,8 +1,8 @@
 <!DOCTYPE html>
   <meta charset="utf-8">
   <head>
-      <title>Simple Circle Pack (d3 v4; CSV; 50 Lines)</title>
-      <script src="https://d3js.org/d3.v4.min.js"></script>
+      <title>Simple Circle Pack</title>
+      <script src="https://d3js.org/d3.v5.min.js"></script>
       <script src="index.js"></script>
       <link href="styles.css" rel="stylesheet">
   </head>
@@ -14,6 +14,8 @@
 </html>
 
 <script>
+// import data from api and return values --> values in array --> merge arrays
+
     var Width = 600;
     var Height = 400;
 
@@ -21,25 +23,67 @@
     var g = d3.select('svg').attr('width', Width).attr('height', Height).select('g');
 
 
-    // // Get the data from our CSV files
-    // d3.csv('catLabel_catBTLabel.csv', function(error, CsvData) {
-    //     if (error) throw error;
-    //
-    //     Data = d3.stratify()(CsvData);
-    //
-    //     console.log(CsvData);
-    //     drawViz(Data);
-    // });
+       const endpoint = 'https://api.data.netwerkdigitaalerfgoed.nl/datasets/ivo/NMVW/services/NMVW-19/sparql';
+       const query_IDs = `
+         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+         PREFIX dc: <http://purl.org/dc/elements/1.1/>
+         PREFIX dct: <http://purl.org/dc/terms/>
+         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+         PREFIX edm: <http://www.europeana.eu/schemas/edm/>
+         PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
-    d3.csv("catLabel_catBTLabel.csv", function(data1) {
-      console.log(data1);
-  });
+         SELECT ?id ?parentId
+         WHERE {
+               # er wordt van boven naar beneden gewerkt in de hiërarchie
+               # geef de categorieën onder wapens en munitie; dit zijn alle parentlabels
+               <https://hdl.handle.net/20.500.11840/termmaster12435> skos:narrower* ?cat .
+               ?cat skos:prefLabel ?id .
 
-    d3.csv("aantallen.csv","catLabel_catBTLabel.csv", function(data1,data2) {
-    console.log(data2);
-})
+               # geef de term (de "broader term") die daarboven staat in de thesaurus; dit is je 'hoofdterm' nu
+               ?cat skos:broader ?catParent .
+               ?catParent skos:prefLabel ?parentId .
+             }
+             GROUP BY ?id ?parentId
+             ORDER BY ASC(?id)
+               `
+
+        const query_aantallen = `
+          PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+          PREFIX dc: <http://purl.org/dc/elements/1.1/>
+          PREFIX dct: <http://purl.org/dc/terms/>
+          PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+          PREFIX edm: <http://www.europeana.eu/schemas/edm/>
+          PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+          SELECT ?id (COUNT(?cho) AS ?size)
+          WHERE {
+           # er wordt van boven naar beneden gewerkt in de hiërarchie
+           # geef de categorieën onder wapens en munitie; dit zijn alle parentlabels
+           <https://hdl.handle.net/20.500.11840/termmaster12435> skos:narrower* ?cat .
+           ?cat skos:prefLabel ?id .
+          # geef de term (de "narrower term") die daaronder staat in de thesaurus; dit is je 'hoofdterm' nu
+           ?cat skos:broader ?catParent .
+           ?catParent skos:prefLabel ?parentId .
+          # geef het aantal daadwerkelijke [fysieke] objecten met dit label
+          # probleem; rekent niet ook alle objecten in zijn sublabels mee
+           OPTIONAL {
+            ?cho edm:object ?cat .
+           }
+          }
+          GROUP BY ?id
+          ORDER BY ASC(?id)
+          `
+
+          d3.json(endpoint + '?query=' + encodeURIComponent(query_IDs) + '&format=json').then(function(id_parentID_columns){
+            console.log(id_parentID_columns)
+          })
+
+          d3.json(endpoint + '?query=' + encodeURIComponent(query_aantallen) + '&format=json').then(function(id_parentID_columns){
+            console.log(id_parentID_columns)
+          })
 
 
+
+// Teken visualisatie
     function drawViz(Data) {
         // Declare d3 layout
         var Layout = d3.pack().size([Width, Height]);
