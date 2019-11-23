@@ -80,41 +80,53 @@
     loadData(endpoint, query_IDs, query_aantallen)
   }
 
-  function loadData(endpoint, query_IDs, query_aantallen, id_parentID_columns, id_size_columns){
-    d3.json(endpoint + '?query=' + encodeURIComponent(query_IDs) + '&format=json').then
-    (function(id_parentID_columns){
-      console.log(id_parentID_columns)
-      // --> je moet wel aangeven aan welke functie je deze gegevens wil returnen/doorgeven
-      dataToArray(id_parentID_columns)
-      return id_parentID_columns
-      // returnbothcolumns()
+  function loadData(endpoint, query_IDs, query_aantallen){
+    const id_parentID_columns = d3.json(endpoint + '?query=' + encodeURIComponent(query_IDs) + '&format=json').then(function(data){
+      data = data.results.bindings
+      // console.log(data[0])
+      dataToArray(data)
     })
-    d3.json(endpoint + '?query=' + encodeURIComponent(query_aantallen) + '&format=json').then(id_size_columns)
+  
+
+
+    //
+    // id_parentID_columns.then(function(data)  {
+    //   console.log("last log", data);
+    // })
 
 
 
-    // console.log(id_size_columns)
+//    (function(id_parentID_columns){
+      // --> je moet wel aangeven aan welke functie je deze gegevens wil returnen/doorgeven
+//      dataToArray(id_parentID_columns)
+  //  })
+    // d3.json(endpoint + '?query=' + encodeURIComponent(query_aantallen) + '&format=json').then
+    // (function(id_size_columns){
+    //   // dataToArray(id_size_columns)
+    // })
 
 
-    // function returnbothcolumns(id_parentID_columns, id_size_columns){
-      // console.log(id_parentID_columns)
-    // }
-    // console.log(id_parentID_columns)
+  // CopyPasta
 
+    // const fetchData = d3
+    // .json(endpoint + '?query=' + encodeURIComponent(query_IDs) + '&format=json')
+    // .then(function(data) {
+    //   console.log(data)
+    //   return data.results.bindings
+    // });
+    //
+    // fetchData.then(function(data)  {
+    //   let dataDB = data.results.bindings
+    //   console.log("last log", dataDB);
+    // });
 
-
-
-    dataToArray(id_parentID_columns, id_size_columns)
   }
 
-  function dataToArray(id_parentID_columns, id_size_columns){
 
+  function dataToArray(id_parentID_columns){
+    console.log(id_parentID_columns[0])
   }
 
-
-  function id_size_columns(){
-    console.log(id_size_columns)
-  }
 
 
 // Teken visualisatie
