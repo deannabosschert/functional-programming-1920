@@ -80,13 +80,24 @@
     loadData(endpoint, query_IDs, query_aantallen)
   }
 
-  function loadData(endpoint, query_IDs, query_aantallen){
-    const id_parentID_columns = d3.json(endpoint + '?query=' + encodeURIComponent(query_IDs) + '&format=json').then(function(data){
-      data = data.results.bindings
-      // console.log(data[0])
-      dataToArray(data)
+  function loadData(endpoint, query_IDs, query_aantallen, data1){
+    const data = d3.json(endpoint + '?query=' + encodeURIComponent(query_IDs) + '&format=json')
+    const data1 = data.results.bindings
+    dataToArray(data1)
+
+
+    const id_size_columns = d3.json(endpoint + '?query=' + encodeURIComponent(query_aantallen) + '&format=json').then
+    (function(data2){
+      data2 = data2.results.bindings
+      dataToArray(data2)
     })
-  
+
+
+
+
+
+
+
 
 
     //
@@ -123,8 +134,9 @@
   }
 
 
-  function dataToArray(id_parentID_columns){
-    console.log(id_parentID_columns[0])
+  function dataToArray(data, id_size_columns){
+    console.log(data)
+    // console.log(id_size_columns[0])
   }
 
 
