@@ -25,7 +25,6 @@
     let g = d3.select('svg').attr('width', Width).attr('height', Height).select('g')
   }
 
-  // import data from api and return values --> values in array --> merge arrays
   // import data from api and return values
   sparQL_queries()
   function sparQL_queries() {
@@ -81,6 +80,7 @@
     loadData2(endpoint, query_aantallen)
   }
 
+// parse api data of id+parentid columns as json, then convert in own array with d3.json
 function loadData1(endpoint, query_IDs){
   const querySource_ID = endpoint + '?query=' + encodeURIComponent(query_IDs) + '&format=json'
   d3.json(querySource_ID).then(function(data){
@@ -90,7 +90,8 @@ function loadData1(endpoint, query_IDs){
   })
 }
 
-function loadData2(endpoint, query_aantallen){
+// parse api data of id+size columns as json, then convert in own array with d3.json
+function loadData2(endpoint, query_aantallen, data1){
   const querySource_size = endpoint + '?query=' + encodeURIComponent(query_aantallen) + '&format=json'
   d3.json(querySource_size).then(function(data){
     data2 = data.results.bindings
@@ -98,79 +99,49 @@ function loadData2(endpoint, query_aantallen){
   })
 }
 
+// merge data of all columns in one array
 function dataToArray(data1, data2){
-  console.log(data1[0].id.value)
-  console.log(data2[0].size.value)
+  // data1.forEach(id => console.log(id));
+
+  console.log('test')
+  // console.log(data1[0].id.value)
+  // console.log(data2[0].size.value)
 }
 
 
 
+function joinArrays(){
+// const result = innerJoin(data1, data2,
+//     ({id: uid, name}, {size, id}) =>
+//         id === id && {id, parentId, size});
+const innerJoin = (xs, ys, sel) =>
+    xs.reduce((zs, x) =>
+    ys.reduce((zs, y) =>        // cartesian product - all combinations
+    zs.concat(sel(x, y) || []), // filter out the rows and columns you want
+    zs), [])
 
-// function loadData2(endpoint, query_aantallen){
-//   const querySource_size = endpoint + '?query=' + encodeURIComponent(query_aantallen) + '&format=json'
-//   d3.json(querySource_size).then(function(dataTwee){
-//     dataTwee = dataTwee.results.bindings
-//     const data2 = dataTwee
-//     dataToArray()
-//
-//   })
+const dataeen = [
+    {id: 1, parentid: "Ashok"},
+    {id: 2, parentid: "Amit"},
+    {id: 3, parentid: "Rajeev"},
+]
 
+const datatwee = [
+    {catid: 1, size: "een"},
+    {catid: 2, size: "twee"},
+    {catid: 3, size: "drie"},
+]
 
+const result = innerJoin(dataeen, datatwee,
+    ({id, parentid}, {catid, size}) =>
+        id === catid && {id, size, parentid})
 
-    // d3.json(endpoint + '?query=' + encodeURIComponent(query_aantallen) + '&format=json').then
-    // (function id_size_columns (data2){
-    //   data2 = data2.results.bindings
-    //   dataToArray(data2)
-    // })
-
-
-// }
-//
-
-
-
-
-
-
-
-
-
-    //
-    // id_parentID_columns.then(function(data)  {
-    //   console.log("last log", data);
-    // })
+console.table(result)
+}
 
 
 
-//    (function(id_parentID_columns){
-      // --> je moet wel aangeven aan welke functie je deze gegevens wil returnen/doorgeven
-//      dataToArray(id_parentID_columns)
-  //  })
-    // d3.json(endpoint + '?query=' + encodeURIComponent(query_aantallen) + '&format=json').then
-    // (function(id_size_columns){
-    //   // dataToArray(id_size_columns)
-    // })
-
-
-  // CopyPasta
-
-    // const fetchData = d3
-    // .json(endpoint + '?query=' + encodeURIComponent(query_IDs) + '&format=json')
-    // .then(function(data) {
-    //   console.log(data)
-    //   return data.results.bindings
-    // });
-    //
-    // fetchData.then(function(data)  {
-    //   let dataDB = data.results.bindings
-    //   console.log("last log", dataDB);
-    // });
-
-
-
-
-
-// Teken visualisatie
+// Teken visualisatie https://bl.ocks.org/denjn5/6d5ddd4226506d644bb20062fc60b53f
   function drawViz(Data) {
         // Declare d3 layout
         var Layout = d3.pack().size([Width, Height]);
