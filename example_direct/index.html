@@ -58,12 +58,12 @@
           PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
           PREFIX edm: <http://www.europeana.eu/schemas/edm/>
           PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-          SELECT ?id (COUNT(?cho) AS ?size)
+          SELECT ?catid (COUNT(?cho) AS ?size)
           WHERE {
            # er wordt van boven naar beneden gewerkt in de hiërarchie
            # geef de categorieën onder wapens en munitie; dit zijn alle parentlabels
            <https://hdl.handle.net/20.500.11840/termmaster12435> skos:narrower* ?cat .
-           ?cat skos:prefLabel ?id .
+           ?cat skos:prefLabel ?catid .
           # geef de term (de "narrower term") die daaronder staat in de thesaurus; dit is je 'hoofdterm' nu
            ?cat skos:broader ?catParent .
            ?catParent skos:prefLabel ?parentId .
@@ -73,8 +73,8 @@
             ?cho edm:object ?cat .
            }
           }
-          GROUP BY ?id
-          ORDER BY ASC(?id)
+          GROUP BY ?catid
+          ORDER BY ASC(?catid)
           `
     loadData1(endpoint, query_IDs)
     loadData2(endpoint, query_aantallen)
@@ -91,7 +91,7 @@ function loadData1(endpoint, query_IDs){
 }
 
 // parse api data of id+size columns as json, then convert in own array with d3.json
-function loadData2(endpoint, query_aantallen, data1){
+function loadData2(endpoint, query_aantallen){
   const querySource_size = endpoint + '?query=' + encodeURIComponent(query_aantallen) + '&format=json'
   d3.json(querySource_size).then(function(data){
     data2 = data.results.bindings
@@ -103,45 +103,36 @@ function loadData2(endpoint, query_aantallen, data1){
 function dataToArray(data1, data2){
   // data1.forEach(id => console.log(id));
 
-  console.log('test')
-  // console.log(data1[0].id.value)
+  console.log('test1')
+  console.log(data1)
+  console.log(data2)
+
+
+  // const innerJoin = (xs, ys, sel) =>
+  //     xs.reduce((zs, x) =>
+  //     ys.reduce((zs, y) =>        // cartesian product - all combinations
+  //     zs.concat(sel(x, y) || []), // filter out the rows and columns you want
+  //     zs), [])
+  //
+  // const result = innerJoin(data1, data2,
+  //         ({id, parentid}, {catid, size}) =>
+  //             id === catid && {id, size, parentid})
+  // console.log('test2')
+  //
+  // console.log('test3')
+  // console.log(result)
+
+  // console.log(data1[0].parentId.value)
+  // console.log(data2[0].id.value)
   // console.log(data2[0].size.value)
 }
 
 
 
-function joinArrays(){
-// const result = innerJoin(data1, data2,
-//     ({id: uid, name}, {size, id}) =>
-//         id === id && {id, parentId, size});
-const innerJoin = (xs, ys, sel) =>
-    xs.reduce((zs, x) =>
-    ys.reduce((zs, y) =>        // cartesian product - all combinations
-    zs.concat(sel(x, y) || []), // filter out the rows and columns you want
-    zs), [])
-
-const dataeen = [
-    {id: 1, parentid: "Ashok"},
-    {id: 2, parentid: "Amit"},
-    {id: 3, parentid: "Rajeev"},
-]
-
-const datatwee = [
-    {catid: 1, size: "een"},
-    {catid: 2, size: "twee"},
-    {catid: 3, size: "drie"},
-]
-
-const result = innerJoin(dataeen, datatwee,
-    ({id, parentid}, {catid, size}) =>
-        id === catid && {id, size, parentid})
-
-console.table(result)
-}
 
 
 
-// Teken visualisatie https://bl.ocks.org/denjn5/6d5ddd4226506d644bb20062fc60b53f
+// Teken visualisatie
   function drawViz(Data) {
         // Declare d3 layout
         var Layout = d3.pack().size([Width, Height]);
