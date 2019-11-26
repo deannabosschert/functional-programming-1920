@@ -71,11 +71,10 @@
           GROUP BY ?catid
           ORDER BY ASC(?catid)
           `
-    var promise1 = loadData1(endpoint, query_IDs)
-    var promise2 = loadData2(endpoint, query_aantallen)
-    Promise.all([promise1, promise2]).then(results => {
-      console.log(results)
-      dataToArray(results)
+    let promise1 = loadData1(endpoint, query_IDs)
+    let promise2 = loadData2(endpoint, query_aantallen)
+    Promise.all([promise1, promise2]).then(function(bothArrays){
+      dataToArray(bothArrays)
     })
   }
 // parse api data of id+parentid columns as json, then convert in own array with d3.json
@@ -93,11 +92,20 @@ function loadData2(endpoint, query_aantallen){
     return data.results.bindings
   })
 }
+
 // merge data of all columns in one array
-function dataToArray(data1, data2){
+function dataToArray(bothArrays, results){
   // data1.forEach(id => console.log(id));
   console.log('test1')
-  console.log(results)
+  let firstArray = bothArrays.slice(0,1)
+  let secondArray = bothArrays.slice(1)
+
+
+
+
+  console.log(firstArray[0])
+  console.log(secondArray)
+
   // console.log(data1)
   // console.log(data2)
   // console.log(data1[0].id.value)
@@ -114,7 +122,7 @@ function dataToArray(data1, data2){
   // const result = innerJoin(data1, data2,
   //         ({id, parentid}, {catid, size}) =>
   //             id === catid && {id, size, parentid})
-  console.log('test2')
+
   // console.log(result)
   // console.log(data1[0].parentId.value)
   // console.log(data2[0].catid.value)
