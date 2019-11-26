@@ -1,4 +1,4 @@
- <!--source for sparql data to json https://beta.vizhub.com/Razpudding/2b231e4f093b411bbb259115019e02ea?edit=files&file=index.js -->
+<!--source for sparql data to json https://beta.vizhub.com/Razpudding/2b231e4f093b411bbb259115019e02ea?edit=files&file=index.js -->
 
 <!DOCTYPE html>
   <meta charset="utf-8">
@@ -16,7 +16,6 @@
 </html>
 
 <script>
-
   // Prepare our physical space for d3
   prepare_HTML_space()
   function prepare_HTML_space() {
@@ -24,7 +23,6 @@
     let Height = 400
     let g = d3.select('svg').attr('width', Width).attr('height', Height).select('g')
   }
-
   // import data from api and return values
   sparQL_queries()
   function sparQL_queries() {
@@ -36,21 +34,18 @@
          PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
          PREFIX edm: <http://www.europeana.eu/schemas/edm/>
          PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-
          SELECT ?id ?parentId
          WHERE {
                # er wordt van boven naar beneden gewerkt in de hiërarchie
                # geef de categorieën onder wapens en munitie; dit zijn alle parentlabels
                <https://hdl.handle.net/20.500.11840/termmaster12435> skos:narrower* ?cat .
                ?cat skos:prefLabel ?id .
-
                # geef de term (de "broader term") die daarboven staat in de thesaurus; dit is je 'hoofdterm' nu
                ?cat skos:broader ?catParent .
                ?catParent skos:prefLabel ?parentId .
              }
              GROUP BY ?id ?parentId
              ORDER BY ASC(?id)     `
-
         const query_aantallen = `
           PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
           PREFIX dc: <http://purl.org/dc/elements/1.1/>
@@ -76,80 +71,64 @@
           GROUP BY ?catid
           ORDER BY ASC(?catid)
           `
-    loadData1(endpoint, query_IDs)
-    loadData2(endpoint, query_aantallen)
+    var promise1 = loadData1(endpoint, query_IDs)
+    var promise2 = loadData2(endpoint, query_aantallen)
+    Promise.all([promise1, promise2]).then(results => {
+      console.log(results)
+      dataToArray(results)
+    })
   }
-
 // parse api data of id+parentid columns as json, then convert in own array with d3.json
 function loadData1(endpoint, query_IDs){
   const querySource_ID = endpoint + '?query=' + encodeURIComponent(query_IDs) + '&format=json'
-  d3.json(querySource_ID).then(function(data){
-    data1 = data.results.bindings
-    return data1
-    loadData2(data1)
+  return d3.json(querySource_ID).then(function(data){
+    return data.results.bindings
+    // loadData2(data1)
   })
 }
-
 // parse api data of id+size columns as json, then convert in own array with d3.json
 function loadData2(endpoint, query_aantallen){
   const querySource_size = endpoint + '?query=' + encodeURIComponent(query_aantallen) + '&format=json'
-  d3.json(querySource_size).then(function(data){
-    data2 = data.results.bindings
-    dataToArray(data1, data2)
+  return d3.json(querySource_size).then(function(data){
+    return data.results.bindings
   })
 }
-
-
-
 // merge data of all columns in one array
 function dataToArray(data1, data2){
   // data1.forEach(id => console.log(id));
-
   console.log('test1')
+  console.log(results)
   // console.log(data1)
   // console.log(data2)
-  console.log(data1[0].id.value)
-  console.log(data2[0].size.value)
-
-
+  // console.log(data1[0].id.value)
+  // console.log(data2[0].size.value)
   // const innerJoin = (xs, ys, sel) =>
   //     xs.reduce((zs, x) =>
   //     ys.reduce((zs, y) =>        // cartesian product - all combinations
   //     zs.concat(sel(x, y) || []), // filter out the rows and columns you want
   //     zs), [])
-
 // const id = data1.id.value
 // const parentId = data1.parentId.value
 // const catid = data2.catid.value
 // const size = data2.size.value
-
   // const result = innerJoin(data1, data2,
   //         ({id, parentid}, {catid, size}) =>
   //             id === catid && {id, size, parentid})
   console.log('test2')
-
   // console.log(result)
   // console.log(data1[0].parentId.value)
   // console.log(data2[0].catid.value)
   // console.log(data2[0].size.value)
 }
-
-
-
-
-
-
 // Teken visualisatie
   function drawViz(Data) {
         // Declare d3 layout
         var Layout = d3.pack().size([Width, Height]);
-
         // Layout + Data
         var Root = d3.hierarchy(Data).sum(function (d) { return d.data.size; });
         var Nodes = Root.descendants();
         Layout(Root);
         var Slices = g.selectAll('circle').data(Nodes).enter().append('circle');
-
         // Draw on screen
         Slices.attr('cx', function (d) { return d.x; })
             .attr('cy', function (d) { return d.y; })
