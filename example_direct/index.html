@@ -99,13 +99,17 @@ function loadData2(endpoint, query_aantallen){
   })
 }
 
+
+
 // merge data of all columns in one array
 function dataToArray(data1, data2){
   // data1.forEach(id => console.log(id));
 
   console.log('test1')
-  console.log(data1)
-  console.log(data2)
+  // console.log(data1)
+  // console.log(data2)
+  console.log(data1[0].id.value)
+  console.log(data2[0].size.value)
 
 
   // const innerJoin = (xs, ys, sel) =>
@@ -113,17 +117,20 @@ function dataToArray(data1, data2){
   //     ys.reduce((zs, y) =>        // cartesian product - all combinations
   //     zs.concat(sel(x, y) || []), // filter out the rows and columns you want
   //     zs), [])
-  //
+
+// const id = data1.id.value
+// const parentId = data1.parentId.value
+// const catid = data2.catid.value
+// const size = data2.size.value
+
   // const result = innerJoin(data1, data2,
   //         ({id, parentid}, {catid, size}) =>
   //             id === catid && {id, size, parentid})
-  // console.log('test2')
-  //
-  // console.log('test3')
-  // console.log(result)
+  console.log('test2')
 
+  // console.log(result)
   // console.log(data1[0].parentId.value)
-  // console.log(data2[0].id.value)
+  // console.log(data2[0].catid.value)
   // console.log(data2[0].size.value)
 }
 
