@@ -97,33 +97,79 @@ function loadData2(endpoint, query_aantallen){
 function dataToArray(bothArrays, results){
   // data1.forEach(id => console.log(id));
   console.log('test1')
-  let firstArray = bothArrays.slice(0,1)
-  let secondArray = bothArrays.slice(1)
+  const firstArray_v1 = bothArrays.slice(0,1)
+  const secondArray_v1 = bothArrays.slice(1)
 
- firstArray.forEach(function(results){
-    console.log(results)
+  const firstArray_v2 = []
+  const secondArray_v2 =[]
+
+
+
+  //loop through outer arrays
+  // first array
+  firstArray_v1[0].forEach(function(results){
+   firstArray_v2.push(results)
+   // firstArray_v3.push(results2.id.value)--> array met alle id's
   })
 
-  console.log(results)
+
+
+
+
+  // second array
+  // secondArray_v1[0].forEach(function(results){
+  //  secondArray_v2.push(results)
+  // })
+
+// huidige nesting uitgeschreven
+// [{id:{
+//       type = "literal",
+//       value: "artilleriegranaten"
+//      }
+//   parentId:{
+//       type = "literal",
+//       value: "artilleriemunitie"
+//        }
+// },
+// {id:{
+//       type = "literal",
+//       value: "artilleriemunitie"
+//      }
+//   parentId:{
+//       type = "literal",
+//       value: "munitie"
+//        }
+// }]
+
+
+// console.log(firstArray_v2.id.value)
+
+// console.log(secondArray_v2)
 
 
   // console.log(firstArray[0])
-  console.log(secondArray)
 
   // console.log(data1)
   // console.log(data2)
   // console.log(data1[0].id.value)
   // console.log(data2[0].size.value)
+  console.log(firstArray_v2)
+  console.log(firstArray_v2[0])
+  console.log(firstArray_v2[0].id.value)
+  console.log(firstArray_v2[0].id.value)
+
+
+
   // const innerJoin = (xs, ys, sel) =>
   //     xs.reduce((zs, x) =>
   //     ys.reduce((zs, y) =>        // cartesian product - all combinations
   //     zs.concat(sel(x, y) || []), // filter out the rows and columns you want
-  //     zs), [])
-// const id = data1.id.value
-// const parentId = data1.parentId.value
-// const catid = data2.catid.value
-// const size = data2.size.value
-  // const result = innerJoin(data1, data2,
+//   //     zs), [])
+// const id = firstArray_v3.id.value
+// const parentId = firstArray_v3.parentId.value
+// const catid = secondArray_v3.catid.value
+// const size = secondArray_v3.size.value
+  // const result = innerJoin(firstArray_v3, secondArray_v3,
   //         ({id, parentid}, {catid, size}) =>
   //             id === catid && {id, size, parentid})
 
