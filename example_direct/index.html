@@ -96,26 +96,24 @@ function loadData2(endpoint, query_aantallen){
 // merge data of all columns in one array
 function dataToArray(bothArrays){
   // data1.forEach(id => console.log(id));
-  console.log('test1')
   const firstArray_v1 = bothArrays.slice(0,1)
   const secondArray_v1 = bothArrays.slice(1)
 
-  const firstArray_v2 = []
-  const secondArray_v2 =[]
+  const firstArray_v2 = (pullFromArray(firstArray_v1))
+  const secondArray_v2 = (pullFromArray(secondArray_v1))
+
+  function pullFromArray(array) {
+    return array.map(item => {
+      return {
+        item: array.item
+      }
+    })
+  }
+
+  console.log (firstArray_v2)
+  console.log (secondArray_v2)
 
 
-
-
-  //loop through outer arrays
-  // first array
-  firstArray_v1[0].forEach(function(results){
-   firstArray_v2.push(results)
-  })
-
-  // second array
-  secondArray_v1[0].forEach(function(results){
-   secondArray_v2.push(results)
-  })
 
 
   const arrayBooms1 = [firstArray_v2].flat()
