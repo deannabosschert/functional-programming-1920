@@ -94,7 +94,7 @@ function loadData2(endpoint, query_aantallen){
 }
 
 // merge data of all columns in one array
-function dataToArray(bothArrays, results){
+function dataToArray(bothArrays){
   // data1.forEach(id => console.log(id));
   console.log('test1')
   const firstArray_v1 = bothArrays.slice(0,1)
@@ -104,12 +104,6 @@ function dataToArray(bothArrays, results){
   const secondArray_v2 =[]
 
 
-
-  // const map1 = array1.map(x => x * 2);
-  // const firstArray_v2 = firstArray_v1.map(results =>   firstArray_v1[0].forEach(function(results){
-  //    firstArray_v2.push(results)
-  //    // firstArray_v3.push(results2.id.value)--> array met alle id's
-  //  })
 
 
   //loop through outer arrays
@@ -148,21 +142,18 @@ function dataToArray(bothArrays, results){
   const eersteArray = (prettyfyArray1(arrayBooms1))
   const tweedeArray = (prettyfyArray2(arrayBooms2))
 
-  console.log(eersteArray)
-  console.log(tweedeArray)
-
   const innerJoin = (xs, ys, sel) =>
       xs.reduce((zs, x) =>
       ys.reduce((zs, y) =>        // cartesian product - all combinations
       zs.concat(sel(x, y) || []), // filter out the rows and columns you want
       zs), [])
 
-  // const finalResult = innerJoin(firstArray_v2, secondArray_v2,
-  //         ({id, parentId}, {catid, size}) =>
-  //             id === catid && {caid, parentId, size})
-  //
-  // console.log(finalResult);
-  // console.table(finalResult);
+  const finalResult = innerJoin(eersteArray, tweedeArray,
+          ({id, parentId}, {catid, size}) =>
+              id === catid && {id, parentId, size})
+
+  console.log(finalResult)
+  console.table(finalResult)
 
 
 }
