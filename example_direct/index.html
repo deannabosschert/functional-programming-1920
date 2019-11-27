@@ -103,26 +103,73 @@ function dataToArray(bothArrays, results){
   const firstArray_v2 = []
   const secondArray_v2 =[]
 
+  const firstArray_v3 = []
+
+
+  // const map1 = array1.map(x => x * 2);
+  // const firstArray_v2 = firstArray_v1.map(results =>   firstArray_v1[0].forEach(function(results){
+  //    firstArray_v2.push(results)
+  //    // firstArray_v3.push(results2.id.value)--> array met alle id's
+  //  })
 
 
   //loop through outer arrays
   // first array
   firstArray_v1[0].forEach(function(results){
    firstArray_v2.push(results)
-   // firstArray_v3.push(results2.id.value)--> array met alle id's
   })
 
+  firstArray_v2.forEach(function(results){
+    const een = results.id.value
+    const twee = results.parentId.value
 
-
-
+   firstArray_v3.push(results)
+  })
 
   // second array
-  // secondArray_v1[0].forEach(function(results){
-  //  secondArray_v2.push(results)
-  // })
+  secondArray_v1[0].forEach(function(results){
+   secondArray_v2.push(results)
+  })
+
+  console.log(firstArray_v3.map(item => {
+    return {
+      id: item.id && item.id.value,
+      parentId: item.parentId && item.parentId.value
+    }
+  }))
+
+  const arrayBooms = [firstArray_v1, firstArray_v2, firstArray_v3].flat()
+
+  console.log(prettyfyArray(arrayBooms))
+
+  function prettyfyArray(array) {
+    return array.map(item => {
+      return {
+        id: item.id && item.id.value,
+        parentId: item.parentId && item.parentId.value
+      }
+    })
+  }
+
+//   const object1 = {
+// name: 'Flavio',
+// ding: 'hallo'
+// }
+//
+// const object2 = {
+// age: 35
+// }
+//
+// foo = object1.name
+//
+// const object3 = {...foo, ...object2 }
+// console.log(object3)
+
+
 
 // huidige nesting uitgeschreven
-// [{id:{
+// const firstArray_v2 = [
+//   {id:{
 //       type = "literal",
 //       value: "artilleriegranaten"
 //      }
@@ -141,42 +188,52 @@ function dataToArray(bothArrays, results){
 //        }
 // }]
 
+// const questions = [
+//     {
+//      id: {
+//        1
+//      },
+//      text:{"text1"}
+//      ,
+//      createdBy: 2
+//      },
+//     {id: 2, text: "text2", createdBy: 2},
+//     {id: 3, text: "text3", createdBy: 1},
+//     {id: 4, text: "text4", createdBy: 2},
+//     {id: 5, text: "text5", createdBy: 3},
+//     {id: 6, text: "text6", createdBy: 3},
+// ]
+//
+// {id:{type = "literal", value: "artilleriegranaten"}, parentId:{type = "literal", value: "artilleriemunitie"}},
 
-// console.log(firstArray_v2.id.value)
+  const innerJoin = (xs, ys, sel) =>
+      xs.reduce((zs, x) =>
+      ys.reduce((zs, y) =>        // cartesian product - all combinations
+      zs.concat(sel(x, y) || []), // filter out the rows and columns you want
+      zs), [])
+//
+// const id = id.value
+// const parentId = parentId.value
+// const catid = catid.value
+// const size = size.value
+//
+// console.log(firstArray_v2[0].id)
+//
+// console.log(firstArray_v2[0].id)
+// console.log(firstArray_v2[0].parentId)
+// console.log(secondArray_v2[0].catid)
+// console.log(secondArray_v2[0].size)
 
-// console.log(secondArray_v2)
 
 
-  // console.log(firstArray[0])
-
-  // console.log(data1)
-  // console.log(data2)
-  // console.log(data1[0].id.value)
-  // console.log(data2[0].size.value)
-  console.log(firstArray_v2)
-  console.log(firstArray_v2[0])
-  console.log(firstArray_v2[0].id.value)
-  console.log(firstArray_v2[0].id.value)
+  // const finalResult = innerJoin(firstArray_v2, secondArray_v2,
+  //         ({id, parentId}, {catid, size}) =>
+  //             id === catid && {caid, parentId, size})
+  //
+  // console.log(finalResult);
+  // console.table(finalResult);
 
 
-
-  // const innerJoin = (xs, ys, sel) =>
-  //     xs.reduce((zs, x) =>
-  //     ys.reduce((zs, y) =>        // cartesian product - all combinations
-  //     zs.concat(sel(x, y) || []), // filter out the rows and columns you want
-//   //     zs), [])
-// const id = firstArray_v3.id.value
-// const parentId = firstArray_v3.parentId.value
-// const catid = secondArray_v3.catid.value
-// const size = secondArray_v3.size.value
-  // const result = innerJoin(firstArray_v3, secondArray_v3,
-  //         ({id, parentid}, {catid, size}) =>
-  //             id === catid && {id, size, parentid})
-
-  // console.log(result)
-  // console.log(data1[0].parentId.value)
-  // console.log(data2[0].catid.value)
-  // console.log(data2[0].size.value)
 }
 // Teken visualisatie
   function drawViz(Data) {
