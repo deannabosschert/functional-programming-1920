@@ -103,7 +103,6 @@ function dataToArray(bothArrays, results){
   const firstArray_v2 = []
   const secondArray_v2 =[]
 
-  const firstArray_v3 = []
 
 
   // const map1 = array1.map(x => x * 2);
@@ -119,30 +118,16 @@ function dataToArray(bothArrays, results){
    firstArray_v2.push(results)
   })
 
-  firstArray_v2.forEach(function(results){
-    const een = results.id.value
-    const twee = results.parentId.value
-
-   firstArray_v3.push(results)
-  })
-
   // second array
   secondArray_v1[0].forEach(function(results){
    secondArray_v2.push(results)
   })
 
-  console.log(firstArray_v3.map(item => {
-    return {
-      id: item.id && item.id.value,
-      parentId: item.parentId && item.parentId.value
-    }
-  }))
 
-  const arrayBooms = [firstArray_v1, firstArray_v2, firstArray_v3].flat()
+  const arrayBooms1 = [firstArray_v2].flat()
+  const arrayBooms2 = [secondArray_v2].flat()
 
-  console.log(prettyfyArray(arrayBooms))
-
-  function prettyfyArray(array) {
+  function prettyfyArray1(array) {
     return array.map(item => {
       return {
         id: item.id && item.id.value,
@@ -150,6 +135,21 @@ function dataToArray(bothArrays, results){
       }
     })
   }
+
+  function prettyfyArray2(array) {
+    return array.map(item => {
+      return {
+        catid: item.catid && item.catid.value,
+        size: item.size && item.size.value
+      }
+    })
+  }
+
+  const eersteArray = (prettyfyArray1(arrayBooms1))
+  const tweedeArray = (prettyfyArray2(arrayBooms2))
+
+  console.log(eersteArray)
+  console.log(tweedeArray)
 
 //   const object1 = {
 // name: 'Flavio',
