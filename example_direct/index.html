@@ -103,15 +103,12 @@ function dataToArray(bothArrays){
   const secondArray_v2 = (pullFromArray(secondArray_v1))
 
   function pullFromArray(array) {
-    return array.map(item => {
-      return {
-        item: array.item
-      }
-    })
+    const yeet = array.flat()
+    return yeet
   }
-
-  console.log (firstArray_v2)
-  console.log (secondArray_v2)
+  // 
+  // console.log (firstArray_v2)
+  // console.log (secondArray_v2)
 
 
 
