@@ -104,18 +104,18 @@ function dataToArray(bothArrays){
   const firstArray_v2 = (flattenArray(firstArray_v1))
   const secondArray_v2 = (flattenArray(secondArray_v1))
 
-  const arrayBooms1 = flattenArray(firstArray_v2)
-  const arrayBooms2 = flattenArray(secondArray_v2)
+  const firstArray_v3 = flattenArray(firstArray_v2)
+  const secondArray_v3 = flattenArray(secondArray_v2)
 
   function flattenArray(array) {
     const result = array.flat()
     return result
   }
 
-  const eersteArray = (prettyfyArray(arrayBooms1))
-  const tweedeArray = (prettyfyArray(arrayBooms2))
+  const eersteArray = (prettifyArray(firstArray_v3))
+  const tweedeArray = (prettifyArray(secondArray_v3))
 
-  function prettyfyArray(array) {
+  function prettifyArray(array) {
     return array.map(item => {
       return {
         id: item.id && item.id.value,
@@ -146,6 +146,8 @@ drawViz(finalResult)
 
 }
 function countSizes(){
+  // node.descendants iets mee doen?
+  // of nieuwe arrays 'if xx als parent, add id.size to dieparentId.size'. Werken met promises
 
 }
 
