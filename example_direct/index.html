@@ -17,12 +17,12 @@
 
 <script>
   // Prepare our physical space for d3
-  prepare_HTML_space()
-  function prepare_HTML_space() {
+  // prepare_HTML_space()
+  // function prepare_HTML_space() {
     let Width = 600
     let Height = 400
     let g = d3.select('svg').attr('width', Width).attr('height', Height).select('g')
-  }
+  // }
   // import data from api and return values
   sparQL_queries()
   function sparQL_queries() {
@@ -93,49 +93,41 @@ function loadData2(endpoint, query_aantallen){
   })
 }
 
+
+
 // merge data of all columns in one array
 function dataToArray(bothArrays){
   // data1.forEach(id => console.log(id));
   const firstArray_v1 = bothArrays.slice(0,1)
   const secondArray_v1 = bothArrays.slice(1)
 
-  const firstArray_v2 = (pullFromArray(firstArray_v1))
-  const secondArray_v2 = (pullFromArray(secondArray_v1))
+  const firstArray_v2 = (flattenArray(firstArray_v1))
+  const secondArray_v2 = (flattenArray(secondArray_v1))
 
-  function pullFromArray(array) {
-    const yeet = array.flat()
-    return yeet
+  const arrayBooms1 = flattenArray(firstArray_v2)
+  const arrayBooms2 = flattenArray(secondArray_v2)
+
+  function flattenArray(array) {
+    const result = array.flat()
+    return result
   }
-  // 
-  // console.log (firstArray_v2)
-  // console.log (secondArray_v2)
 
+  const eersteArray = (prettyfyArray(arrayBooms1))
+  const tweedeArray = (prettyfyArray(arrayBooms2))
 
-
-
-  const arrayBooms1 = [firstArray_v2].flat()
-  const arrayBooms2 = [secondArray_v2].flat()
-
-  function prettyfyArray1(array) {
+  function prettyfyArray(array) {
     return array.map(item => {
       return {
         id: item.id && item.id.value,
-        parentId: item.parentId && item.parentId.value
-      }
-    })
-  }
-
-  function prettyfyArray2(array) {
-    return array.map(item => {
-      return {
+        parentId: item.parentId && item.parentId.value,
         catid: item.catid && item.catid.value,
         size: item.size && item.size.value
       }
     })
   }
 
-  const eersteArray = (prettyfyArray1(arrayBooms1))
-  const tweedeArray = (prettyfyArray2(arrayBooms2))
+
+
 
   const innerJoin = (xs, ys, sel) =>
       xs.reduce((zs, x) =>
@@ -148,22 +140,31 @@ function dataToArray(bothArrays){
               id === catid && {id, parentId, size})
 
   console.log(finalResult)
-  console.table(finalResult)
+  // console.table(finalResult)
 
+drawViz(finalResult)
 
 }
+function countSizes(){
+
+}
+
+
 // Teken visualisatie
-  function drawViz(Data) {
+  function drawViz(finalResult) {
+    console.log(finalResult)
+    // root: 167: {id: "wapens en munitie", parentId: "Objecttrefwoord", size: "2"}
         // Declare d3 layout
-        var Layout = d3.pack().size([Width, Height]);
+        var Layout = d3.pack().size([Width, Height])
         // Layout + Data
-        var Root = d3.hierarchy(Data).sum(function (d) { return d.data.size; });
-        var Nodes = Root.descendants();
-        Layout(Root);
-        var Slices = g.selectAll('circle').data(Nodes).enter().append('circle');
+        // hieronder pakt ie de opperste parentnode
+        var Root = d3.hierarchy(finalResult).sum(function (d) {console.log(d[167]); return d[167].size})
+        var Nodes = Root.descendants()
+        Layout(Root)
+        var Slices = g.selectAll('circle').data(Nodes).enter().append('circle')
         // Draw on screen
-        Slices.attr('cx', function (d) { return d.x; })
-            .attr('cy', function (d) { return d.y; })
-            .attr('r', function (d) { return d.r; });
+        Slices.attr('cx', function (d) { return d.x })
+            .attr('cy', function (d) { return d.y })
+            .attr('r', function (d) { return d.r })
     }
 </script>
