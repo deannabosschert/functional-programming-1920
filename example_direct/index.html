@@ -151,80 +151,11 @@ function dataToArray(bothArrays, results){
   console.log(eersteArray)
   console.log(tweedeArray)
 
-//   const object1 = {
-// name: 'Flavio',
-// ding: 'hallo'
-// }
-//
-// const object2 = {
-// age: 35
-// }
-//
-// foo = object1.name
-//
-// const object3 = {...foo, ...object2 }
-// console.log(object3)
-
-
-
-// huidige nesting uitgeschreven
-// const firstArray_v2 = [
-//   {id:{
-//       type = "literal",
-//       value: "artilleriegranaten"
-//      }
-//   parentId:{
-//       type = "literal",
-//       value: "artilleriemunitie"
-//        }
-// },
-// {id:{
-//       type = "literal",
-//       value: "artilleriemunitie"
-//      }
-//   parentId:{
-//       type = "literal",
-//       value: "munitie"
-//        }
-// }]
-
-// const questions = [
-//     {
-//      id: {
-//        1
-//      },
-//      text:{"text1"}
-//      ,
-//      createdBy: 2
-//      },
-//     {id: 2, text: "text2", createdBy: 2},
-//     {id: 3, text: "text3", createdBy: 1},
-//     {id: 4, text: "text4", createdBy: 2},
-//     {id: 5, text: "text5", createdBy: 3},
-//     {id: 6, text: "text6", createdBy: 3},
-// ]
-//
-// {id:{type = "literal", value: "artilleriegranaten"}, parentId:{type = "literal", value: "artilleriemunitie"}},
-
   const innerJoin = (xs, ys, sel) =>
       xs.reduce((zs, x) =>
       ys.reduce((zs, y) =>        // cartesian product - all combinations
       zs.concat(sel(x, y) || []), // filter out the rows and columns you want
       zs), [])
-//
-// const id = id.value
-// const parentId = parentId.value
-// const catid = catid.value
-// const size = size.value
-//
-// console.log(firstArray_v2[0].id)
-//
-// console.log(firstArray_v2[0].id)
-// console.log(firstArray_v2[0].parentId)
-// console.log(secondArray_v2[0].catid)
-// console.log(secondArray_v2[0].size)
-
-
 
   // const finalResult = innerJoin(firstArray_v2, secondArray_v2,
   //         ({id, parentId}, {catid, size}) =>
