@@ -4,5 +4,8 @@
   },
   "devDependencies": {
     "rollup": "latest"
+  },
+  "dependencies": {
+    "convert-csv-to-array": "^1.0.3"
   }
 }
