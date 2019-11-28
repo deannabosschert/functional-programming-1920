@@ -121,7 +121,7 @@ function dataToArray(bothArrays){
       zs.concat(sel(x, y) || []), // filter out the rows and columns you want
       zs), [])
 
-  const finalResult = innerJoin(eersteArray, tweedeArray,
+  const data = innerJoin(eersteArray, tweedeArray,
           ({id, parentId}, {catid, size}) =>
               id === catid && {id, parentId, size})
   // console.table(finalResult)
@@ -129,10 +129,59 @@ function dataToArray(bothArrays){
 
 
 
-  countSizes(finalResult)
+  makeHierarchy(data)
 }
 
-function countSizes(finalResult){
+// source: http://bl.ocks.org/d3noob/8329404
+function makeHierarchy(data){
+  console.log(data)
+  // create a name: node map
+  const dataMap = data.reduce(function(map, node) {
+    //map iedere id als een node
+  	map[node.id] = node
+  	return map
+  }, {})
+
+  // create the hierarchical array
+  const circlePackData = []
+  data.forEach(function(node) {
+  	// add to parent
+  	const parent = dataMap[node.parentId]
+  	if (parent) {
+  		// create child array if it doesn't exist
+  		(parent.children || (parent.children = []))
+  			// add node to child array
+  			.push(node)
+  	} else {
+  		// parent is null or missing
+  		circlePackData.push(node)
+  	}
+  })
+
+  // packLayout(rootNode);
+  //
+  // const nodes = d3.select('svg g')
+  //   .selectAll('g')
+  //   .data(rootNode.descendants())
+  //   .enter()
+  //   .append('g')
+  //   .attr('transform', function(d) {return 'translate(' + [d.x, d.y] + ')'})
+  //
+  // nodes
+  //   .append('circle')
+  //   .attr('r', function(d) { return d.data.size; })
+  //
+  // nodes
+  //   .append('text')
+  //   .attr('dy', 4)
+  //   .text(function(d) {
+  //     return d.children === undefined ? d.data.id : '';
+  //   })
+  countSizes(circlePackData)
+}
+
+function countSizes(circlePackData){
+  console.log(circlePackData)
   // if (id == "artilleriemunitie"){
   //   console.log(finalResult)
   // }
@@ -141,35 +190,27 @@ function countSizes(finalResult){
 
 // https://developer.mozilla.org/nl/docs/Web/JavaScript/Reference/Global_Objects/Array/find
   // function zoekId(array) {
-  //     return array.id === "artilleriemunitie";
+  //     return array.id === "artilleriemunitie"
   //   }
   // console.log(finalResult.find(zoekId)) // { id: 'artilleriemunitie', aantal: 0 }
 
   //node.sum telt alles van de children op
-
-  console.log(finalResult)
-  // const root = d3.hierarchy({children: finalResult})
-  //     .sum(d => d.size);
-  //
-  //
-  // console.log(root)
-
 }
 
 
 // Teken visualisatie
-  function drawViz(finalResult) {
-    // root: 167: {id: "wapens en munitie", parentId: "Objecttrefwoord", size: "2"}
-        // Declare d3 layout
-        var Layout = d3.pack().size([Width, Height])
-        // Layout + Data
-        // hieronder pakt ie de opperste parentnode
-        var Root = d3.hierarchy(finalResult).sum(function (d) {console.log(d[167]); return d[167].size})
-        var Nodes = Root.descendants()
-        Layout(Root)
-        var Slices = g.selectAll('circle').data(Nodes).enter().append('circle')
-        // Draw on screen
-        Slices.attr('cx', function (d) { return d.x })
-            .attr('cy', function (d) { return d.y })
-            .attr('r', function (d) { return d.r })
-    }
+  // function drawViz(finalResult) {
+  //   // root: 167: {id: "wapens en munitie", parentId: "Objecttrefwoord", size: "2"}
+  //       // Declare d3 layout
+  //       var Layout = d3.pack().size([Width, Height])
+  //       // Layout + Data
+  //       // hieronder pakt ie de opperste parentnode
+  //       var Root = d3.hierarchy(finalResult).sum(function (d) {console.log(d[167]); return d[167].size})
+  //       var Nodes = Root.descendants()
+  //       Layout(Root)
+  //       var Slices = g.selectAll('circle').data(Nodes).enter().append('circle')
+  //       // Draw on screen
+  //       Slices.attr('cx', function (d) { return d.x })
+  //           .attr('cy', function (d) { return d.y })
+  //           .attr('r', function (d) { return d.r })
+  //   }
