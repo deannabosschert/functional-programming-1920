@@ -134,6 +134,10 @@ function dataToArray(bothArrays){
 
 // source: http://bl.ocks.org/d3noob/8329404
 function makeHierarchy(data){
+
+  // to do; kijken of je 'node' mss kan veranderen in de originele naam 'id'
+  // alles van boven naar beneden nogmaals langslopen en comments bijzetten; wat doet wat exact?
+  // losse kleine functions van maken
   console.log(data)
   // create a name: node map
   const dataMap = data.reduce(function(map, node) {
