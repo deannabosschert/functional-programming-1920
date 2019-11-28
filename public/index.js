@@ -129,10 +129,6 @@ function dataToArray(bothArrays){
 
 
 
-
-
-
-  console.log(finalResult)
   countSizes(finalResult)
 }
 
@@ -144,11 +140,19 @@ function countSizes(finalResult){
   // of nieuwe arrays 'if xx als parent, add id.size to dieparentId.size'. Werken met promises
 
 // https://developer.mozilla.org/nl/docs/Web/JavaScript/Reference/Global_Objects/Array/find
-  function zoekId(array) {
-      return array.id === "artilleriemunitie";
-    }
-  console.log(finalResult.find(zoekId)) // { id: 'artilleriemunitie', aantal: 0 }
+  // function zoekId(array) {
+  //     return array.id === "artilleriemunitie";
+  //   }
+  // console.log(finalResult.find(zoekId)) // { id: 'artilleriemunitie', aantal: 0 }
 
+  //node.sum telt alles van de children op
+
+  console.log(finalResult)
+  // const root = d3.hierarchy({children: finalResult})
+  //     .sum(d => d.size);
+  //
+  //
+  // console.log(root)
 
 }
 
